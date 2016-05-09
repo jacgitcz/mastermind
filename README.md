@@ -23,3 +23,8 @@ loop
 until win or no moves left
 
 The States module is just to provide a common source for constants used by all the classes (possible states of a code guess position = empty + 6 colours, poss states of feedback= empty plus 2 other colours)
+
+# V2
+This allows the human player to choose whether he/she will be the code setter or the code breaker; the computer takes the other role.
+
+When the computer is the code breaker, it follows a simple algorithm which first tries to determine the set of colours in the code, then selects from permutations of that set of colours according to the feedback provided.

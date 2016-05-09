@@ -9,6 +9,12 @@ class Board
 		@current_row = -1 # empty stack
 	end
 
+	def clear_board
+		@guess_stack = []
+		@feedback_stack = []
+		@current_row = -1 # empty stack
+	end
+
     # remaining turns
 	def moves_left
 		MAX_MOVES - 1 - @current_row

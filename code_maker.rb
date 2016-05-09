@@ -28,9 +28,13 @@ class CodeMaker
 
     # compare the guess with the secret code, provide
     # feedback (Mastermind rules)
+    # Overridden in subclass
 	def check_guess
-	    guess = @board.get_guess
-	    feedback = []
+	end
+
+    # Works out the appropriate feedback for a given guess
+	def analyse_guess(guess)
+		feedback = []
 	    guess2 = Array.new(guess)
 	    secret2 = Array.new(@secret_code)
 	    # find exact matches
@@ -63,6 +67,6 @@ class CodeMaker
 	    	empty_arr = [:empty]*(4 - feedback.length)
 	    	feedback += empty_arr
 	    end
-	    @board.set_feedback(feedback)
+	    feedback
 	end
 end

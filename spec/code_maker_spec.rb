@@ -1,12 +1,12 @@
-require_relative "../code_maker"
+require_relative "../cm_comp"
 require_relative "../board"
 require_relative "../states"
 include States
 
-describe CodeMaker do
+describe ComputerCodeMaker do
 	before(:each) do
 		@b = Board.new
-		@cm = CodeMaker.new(@b)
+		@cm = ComputerCodeMaker.new(@b)
 	end
 
 	it "sets up a supplied code" do
